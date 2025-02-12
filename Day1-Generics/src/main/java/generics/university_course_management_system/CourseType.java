@@ -1,0 +1,19 @@
+package generics.university_course_management_system;
+
+import java.util.List;
+
+public abstract class CourseType {
+    // declaring attributes of this class
+    protected String name, type;
+    protected int durationInMonths;
+
+    // declaring an abstract setter method
+    abstract void setCourseAttributes(String name, int durationInMonths);
+
+    // created a method to display details of all courses
+    public static void displayCourses(List<? extends CourseType> list) {
+        for (CourseType o : list) {
+            System.out.println("Course Type: " + o.type + "\nCourse Name: " + o.name + "\nDuration In Months: " + o.durationInMonths);
+        }
+    }
+}
