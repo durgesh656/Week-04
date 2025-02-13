@@ -1,0 +1,14 @@
+package collections.set_interface.find_subsets;
+
+import java.util.Arrays;
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+        HashSet<Integer> set1 = new HashSet<>(Arrays.asList(2, 3));
+        HashSet<Integer> set2 = new HashSet<>(Arrays.asList(1,2,3,4));
+
+        System.out.println("is set1 is a subset of set2 ? "+CheckForSubsets.checkIfSubset(set1,set2));
+    }
+    
+}
