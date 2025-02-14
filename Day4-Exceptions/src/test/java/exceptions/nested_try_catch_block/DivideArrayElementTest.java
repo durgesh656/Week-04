@@ -1,0 +1,24 @@
+package exceptions.nested_try_catch_block;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class DivideArrayElementTest {
+
+    @Test
+    void test1(){
+        assertThrows(ArrayIndexOutOfBoundsException.class, ()-> DivideArrayElement.divideElementOnIndex(new int[]{1,2,3,4}, 2, 5));
+    }
+
+    @Test
+    void test2(){
+        assertEquals(1, DivideArrayElement.divideElementOnIndex(new int[]{1,2,3,4}, 2, 1));
+    }
+
+    @Test
+    void test3(){
+        assertThrows(ArithmeticException.class, ()-> DivideArrayElement.divideElementOnIndex(new int[]{1,2,3,4}, 0, 1));
+    }
+}
