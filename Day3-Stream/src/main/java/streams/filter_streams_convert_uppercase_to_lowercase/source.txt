@@ -1,0 +1,2 @@
+Hello, this is a source text file.
+this file is generated to Convert all the Uppercase to LowerCase.
